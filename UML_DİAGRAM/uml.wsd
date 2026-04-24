@@ -1,0 +1,59 @@
+@startuml
+
+class User {
+    - Id : int
+    - Name : string
+    - Accounts : List<BankAccount>
+    - CreditCards : List<CreditCard>
+    + AddAccount(account : BankAccount)
+    + AddCreditCard(card : CreditCard)
+}
+
+class BankAccount {
+    - AccountNumber : string
+    - Balance : decimal
+    - Transactions : List<Transaction>
+    + Deposit(amount : decimal)
+    + Withdraw(amount : decimal)
+    + GetBalance() : decimal
+}
+
+class CreditCard {
+    - CardNumber : string
+    - Limit : decimal
+    - CurrentDebt : decimal
+    - Transactions : List<Transaction>
+    + Spend(amount : decimal)
+    + PayDebt(amount : decimal, fromAccount : BankAccount)
+    + GetAvailableLimit() : decimal
+}
+
+class Transaction {
+    - Id : int
+    - Type : string
+    - Amount : decimal
+    - Date : DateTime
+}
+
+interface IBankService {
+    + CreateUser(id : int, name : string) : User
+    + OpenAccount(user : User, accountNumber : string, initialBalance : decimal)
+    + IssueCreditCard(user : User, cardNumber : string, limit : decimal)
+    + Deposit(account : BankAccount, amount : decimal)
+    + Withdraw(account : BankAccount, amount : decimal)
+    + Transfer(fromAccount : BankAccount, toAccount : BankAccount, amount : decimal)
+    + MakeCreditCardPayment(card : CreditCard, fromAccount : BankAccount, amount : decimal)
+}
+
+class BankService {
+    - _users : List<User>
+}
+
+IBankService <|.. BankService
+
+User "1" -- "*" BankAccount
+User "1" -- "*" CreditCard
+BankAccount "1" -- "*" Transaction
+CreditCard "1" -- "*" Transaction
+
+@enduml
