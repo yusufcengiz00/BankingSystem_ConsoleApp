@@ -29,31 +29,35 @@ Projenin bilgisayarınızda çalışması için .NET SDK'nın yüklü olması ge
 1. Repoyu klonlayın:
    ```bash
    git clone [https://github.com/yusufcengiz00/BankingSystem_ConsoleApp.git](https://github.com/yusufcengiz00/BankingSystem_ConsoleApp.git)
-
-   Proje dizinine gidin:
+   
 2. Proje dizinine gidin:
-cd BankingSystem_ConsoleApp
-Uygulamayı çalıştırın:
+    ```bash
+    cd BankingSystem_ConsoleApp
 
-3. Uygulamayı Çalıştırın:
-dotnet run
+4. Uygulamayı Çalıştırın:
+   ```bash
+    dotnet run
 
-📊 Örnek Çıktı
+## 📊 Örnek Çıktı
 Plaintext
+
 === BANKA SİSTEMİ MERKEZİ ===
+
 [SİSTEM]: Kullanıcılar oluşturuldu: Yusuf Cengiz ve Ahmet Yılmaz
+
 [HESAP]: TR123456 nolu hesap (Yusuf Cengiz) - Bakiye: 18000 TL
 ...
+
 --- Transfer İşlemi Yapılıyor ---
+
 [KULLANICI]: Yusuf Cengiz
 > Banka Bakiyesi    : 6000 TL
+
 > Kredi Kartı Borcu : 10000 TL
 
-🛠️ Kullanılan Teknolojiler
-Dil: C# (.NET 8.0/9.0)
-
-Versiyon Kontrol: Git & GitHub
-
-Modelleme: UML (PlantUML)
+## 🛠️ Kullanılan Teknolojiler
+- Dil: C# (.NET 8.0/9.0)
+- Versiyon Kontrol: Git & GitHub
+- Modelleme: UML (PlantUML)
 
 <img width="1462" height="733" alt="Ekran görüntüsü 2026-04-24 150146" src="https://github.com/user-attachments/assets/b956e93a-70a9-46b5-b7be-44d02d3caf90" />
