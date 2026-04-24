@@ -56,7 +56,7 @@ Plaintext
 > Kredi Kartı Borcu : 10000 TL
 
 ## 🛠️ Kullanılan Teknolojiler
-- Dil: C# (.NET 8.0/9.0)
+- Dil: C# (.NET 10.0)
 - Versiyon Kontrol: Git & GitHub
 - Modelleme: UML (PlantUML)
 
